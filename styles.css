@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 20px; /* Add some padding to ensure buttons are not too close to the bottom edge */
+    background-color: #F9ADA0;
+}
+
+.button-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+
+.button {
+    padding: 20px 20px;
+    background-color: #a08794;
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Corrected typo in border-radius value */
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px 10px; /* Adjusted margin for better spacing */
+    text-align: center;
+}
+
+
+.fa-heart {
+    color: rgb(239, 233, 174);
+    font-size: 25px;
+    position: absolute;
+    animation:  heartMove linear 1;
+    top: -10vh;
+    z-index: 0;
+}
+
+@keyframes heartMove {
+    0%{
+        transform: translateY(-10vh) ;
+    }
+    100%{
+        transform: translateY(110vh) ;
+    }
+}
