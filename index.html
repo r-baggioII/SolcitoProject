@@ -11,14 +11,17 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="button">Memories together</button>
-        <button class="button">Positivity Corner</button>
-        <button class="button">Cozy Music</button>
+        <button class="button" onclick="showPage('memories')">Memories together</button>
+        <button class="button" onclick="showPage('positivity')">Positivity Corner</button>
+        <button class="button" onclick="showPage('music')">Cozy Music</button>
+        <button class="button" id="goBackButton" style="display: none;" onclick="goHome()">Go Back Home</button>
     </div>
     <!-- Container for Lottie animation -->
     <div id="animationContainer"></div>
     <!-- Link to external JavaScript file -->
     <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+    <!-- Link to external JavaScript file -->
     <script src="script.js" defer></script>
 </body>
 </html>
+
