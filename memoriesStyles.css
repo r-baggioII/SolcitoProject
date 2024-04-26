@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 20px; /* Add some padding to ensure buttons are not too close to the bottom edge */
+    background-color: #F9ADA0 !important; 
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+.carousel {
+    max-width: 600px; /* Adjust as needed */
+    width: 100%;
+}
