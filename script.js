@@ -69,6 +69,8 @@ function showPage(page) {
   xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
           animationContainer.innerHTML = xhr.responseText;
+          // Once the HTML content is loaded, load associated resources
+          loadAssociatedResources(page);
       }
   };
   
@@ -80,6 +82,34 @@ function showPage(page) {
       xhr.open("GET", "music.html", true);
   }
   xhr.send();
+}
+
+function loadAssociatedResources(page) {
+  if (page === 'memories') {
+      loadCSS('memoriesStyles.css');
+      loadScript('memoriesScript.js');
+  } else if (page === 'positivity'){
+      loadCSS('positivityStyles.css'); 
+      loadScript('positivityScript.js');
+  }
+    else if (page == 'music'){
+      loadCSS('musicStyles.css'); 
+      loadScript('musicScript.js');
+  }
+}
+
+function loadCSS(href) {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = href;
+  document.head.appendChild(link);
+}
+
+function loadScript(src) {
+  var script = document.createElement('script');
+  script.src = src;
+  script.defer = true;
+  document.body.appendChild(script);
 }
 
 function goHome() {
