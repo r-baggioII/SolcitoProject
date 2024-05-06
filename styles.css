@@ -9,6 +9,15 @@ body {
     background-color: #F9ADA0;
 }
 
+#message {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 50px auto;
+    text-align: center;
+}
+
+
 .button-container {
     display: flex; /* Use flexbox */
     justify-content: center; /* Center the buttons horizontally */

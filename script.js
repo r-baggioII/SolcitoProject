@@ -1,6 +1,36 @@
 var anim;
 var heartInterval; // Variable to store the interval ID
 
+const messages = ["I love you so much <3 ", "You're amazing!!!", "You make me so happy", "You're such a golden friend", "You deserve the best. ALWAYS","Drink lots of water :)", "You're so beautiful and I can't even...", "YOU'RE SO GORGEUOUS I CAN'T SAY ANYTHING TO YOUR FACE"];
+const messageContainer = document.getElementById('message');
+
+let currentMessageIndex = 0;
+let index = 0;
+
+function displayNextLetter() {
+    const currentMessage = messages[currentMessageIndex];
+    if (index < currentMessage.length) {
+        const letterSpan = document.createElement('span');
+        letterSpan.textContent = currentMessage[index];
+        letterSpan.style.fontWeight = 'bold'; // Make the letter bold
+        messageContainer.appendChild(letterSpan);
+        index++;
+        setTimeout(displayNextLetter, 200); // Adjust the speed here (milliseconds)
+    } else {
+        setTimeout(resetMessage, 3000); // Repeat every 5 seconds
+    }
+}
+
+function resetMessage() {
+    messageContainer.textContent = ''; // Clear the message
+    index = 0;
+    currentMessageIndex = (currentMessageIndex + 1) % messages.length; // Move to the next message
+    displayNextLetter(); // Display the next message
+}
+
+displayNextLetter();
+
+
 function loadAnimation() {
   // Get a reference to the container element
   var container = document.getElementById('animationContainer')

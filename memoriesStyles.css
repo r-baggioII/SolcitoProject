@@ -1,5 +1,5 @@
 body{
-    background-color: white !important;
+  background-color: #F9ADA0 !important;
 }
 
 
@@ -7,7 +7,7 @@ body{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 600px;
+  max-width: 450px;
   position: relative;
   margin: auto;
 }
